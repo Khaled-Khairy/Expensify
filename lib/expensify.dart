@@ -1,3 +1,4 @@
+import 'package:expensify/core/resources/theme.dart';
 import 'package:expensify/core/routing/app_router.dart';
 import 'package:expensify/core/routing/routes.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class Expensify extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRouter,
         initialRoute: Routes.onboardingScreen,
+        theme: theme,
       ),
     );
   }

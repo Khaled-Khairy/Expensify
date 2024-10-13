@@ -1,3 +1,4 @@
+import 'package:expensify/core/resources/colors.dart';
 import 'package:expensify/core/routing/app_router.dart';
 import 'package:expensify/expensify.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +19,8 @@ Future<void> _initializeApp() async {
 void _setSystemUIStyles() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.white,
-      statusBarColor: Colors.white,
+      systemNavigationBarColor: ColorsManager.violet100,
+      statusBarColor: ColorsManager.violet100,
     ),
   );
 }
