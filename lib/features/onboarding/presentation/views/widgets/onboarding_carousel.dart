@@ -3,7 +3,6 @@ import 'package:expensify/core/localization/generated/l10n.dart';
 import 'package:expensify/core/resources/assets.dart';
 import 'package:expensify/core/resources/colors.dart';
 import 'package:expensify/core/resources/styles.dart';
-import 'package:expensify/features/onboarding/data/models/carousel_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -15,24 +14,6 @@ class OnboardingCarousel extends StatefulWidget {
     Assets.carouselImage1,
     Assets.carouselImage2,
     Assets.carouselImage3,
-  ];
-  static const List<CarouselItemModel> items = [
-    CarouselItemModel(
-      image: Assets.carouselImage1,
-      title: 'Gain total control of your money',
-      subtitle: 'Become your own money manager and make every cent count',
-    ),
-    CarouselItemModel(
-      image: Assets.carouselImage2,
-      title: 'Know where your money goes',
-      subtitle:
-          'Track your transaction easily,with categories and financial report ',
-    ),
-    CarouselItemModel(
-      image: Assets.carouselImage3,
-      title: 'Planning ahead',
-      subtitle: 'Setup your budget for each category so you in control',
-    ),
   ];
 
   @override
@@ -60,7 +41,7 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
                       OnboardingCarousel.itemImages[index],
                       height: 300.h,
                     ),
-                    20.verticalSpace,
+                    10.verticalSpace,
                     Text(
                       _getLocalizedTitle(index, context),
                       style: TextStyles.title1(),
@@ -78,7 +59,7 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
             },
           ).toList(),
           options: CarouselOptions(
-              height: 540.h,
+              height: 480.h,
               viewportFraction: 1,
               autoPlay: true,
               onPageChanged: (index, reason) {

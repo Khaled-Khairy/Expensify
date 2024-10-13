@@ -1,13 +1,15 @@
 import 'package:expensify/core/helpers/shared_pref_helper.dart';
 import 'package:expensify/core/helpers/shared_pref_keys.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 bool isLoggedUser = false;
 
 /// Checks if the user is logged in
 Future<void> checkIfLoggedUser() async {
   try {
-    final String userToken = await SharedPrefHelper.getString(key: SharedPrefKeys.accessToken);
+    final String userToken =
+        await SharedPrefHelper.getString(key: SharedPrefKeys.accessToken);
     isLoggedUser = userToken.isNotEmpty;
   } catch (e) {
     isLoggedUser = false;
@@ -23,6 +25,6 @@ void closeKeyboard(BuildContext context) {
   }
 }
 
-
-
-
+bool isArabic() {
+  return Intl.getCurrentLocale() == 'ar';
+}
