@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:expensify/core/localization/generated/l10n.dart';
 import 'package:expensify/core/resources/assets.dart';
 import 'package:expensify/core/resources/colors.dart';
 import 'package:expensify/core/resources/styles.dart';
@@ -10,6 +11,11 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class OnboardingCarousel extends StatefulWidget {
   const OnboardingCarousel({super.key});
 
+  static const List<String> itemImages = [
+    Assets.carouselImage1,
+    Assets.carouselImage2,
+    Assets.carouselImage3,
+  ];
   static const List<CarouselItemModel> items = [
     CarouselItemModel(
       image: Assets.carouselImage1,
@@ -41,8 +47,9 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
     return Column(
       children: [
         CarouselSlider(
-          items: OnboardingCarousel.items.map(
-            (item) {
+          items: List.generate(
+            OnboardingCarousel.itemImages.length,
+            (index) {
               return Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32.w),
                 child: Column(
@@ -50,19 +57,19 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
-                      item.image,
+                      OnboardingCarousel.itemImages[index],
                       height: 300.h,
                     ),
                     20.verticalSpace,
                     Text(
-                      item.title,
+                      _getLocalizedTitle(index, context),
                       style: TextStyles.title1(),
                       textAlign: TextAlign.center,
                     ),
                     6.verticalSpace,
                     Text(
-                      item.subtitle,
-                      style: TextStyles.body1(color: ColorsManager.light20),
+                      _getLocalizedSubtitle(index, context),
+                      style: TextStyles.body1(color: ColorsManager.dark25),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -93,5 +100,31 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
         ),
       ],
     );
+  }
+
+  String _getLocalizedTitle(int index, BuildContext context) {
+    switch (index) {
+      case 0:
+        return S.of(context).carouselImage1_title;
+      case 1:
+        return S.of(context).carouselImage2_title;
+      case 2:
+        return S.of(context).carouselImage3_title;
+      default:
+        return '';
+    }
+  }
+
+  String _getLocalizedSubtitle(int index, BuildContext context) {
+    switch (index) {
+      case 0:
+        return S.of(context).carouselImage1_subtitle;
+      case 1:
+        return S.of(context).carouselImage2_subtitle;
+      case 2:
+        return S.of(context).carouselImage3_subtitle;
+      default:
+        return '';
+    }
   }
 }

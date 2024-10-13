@@ -3,6 +3,8 @@ import 'package:expensify/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../core/localization/generated/l10n.dart';
+
 class AuthButtons extends StatelessWidget {
   const AuthButtons({super.key});
 
@@ -12,13 +14,13 @@ class AuthButtons extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 46.h),
       child: Column(
         children: [
-          const AppTextButton(
-            text: "Sign Up",
+           AppTextButton(
+            text: S.of(context).onboarding_signup,
             textColor: ColorsManager.light80,
           ),
           10.verticalSpace,
-          const AppTextButton(
-            text: "Login",
+           AppTextButton(
+            text: S.of(context).onboarding_login,
             textColor: ColorsManager.violet100,
             backgroundColor: ColorsManager.violet20,
           ),
