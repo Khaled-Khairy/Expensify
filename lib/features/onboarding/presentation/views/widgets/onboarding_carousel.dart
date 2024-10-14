@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:expensify/core/localization/generated/l10n.dart';
+import 'package:expensify/core/locale/generated/l10n.dart';
 import 'package:expensify/core/resources/assets.dart';
 import 'package:expensify/core/resources/colors.dart';
 import 'package:expensify/core/resources/styles.dart';
