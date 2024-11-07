@@ -1,3 +1,4 @@
+import 'package:expensify/core/helpers/shared_pref_helper.dart';
 import 'package:expensify/core/resources/colors.dart';
 import 'package:expensify/core/routing/app_router.dart';
 import 'package:expensify/expensify.dart';
@@ -5,13 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
-  _initializeApp();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await _initializeApp();
   runApp(Expensify(appRouter: AppRouter()));
 }
 
 Future<void> _initializeApp() async {
   await ScreenUtil.ensureScreenSize();
+  await SharedPrefHelper.init();
   _setSystemUIStyles();
   _lockPortraitMode();
 }
