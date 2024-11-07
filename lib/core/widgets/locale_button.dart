@@ -21,8 +21,9 @@ class LocaleButton extends StatelessWidget {
         },
         style: ElevatedButton.styleFrom(
           shape: const RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.all(Radius.circular(8)), // Rounded corners
+            borderRadius: BorderRadius.all(
+              Radius.circular(8),
+            ),
           ),
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
           backgroundColor: ColorsManager.violet100,
