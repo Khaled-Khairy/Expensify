@@ -8,18 +8,23 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await _initializeApp();
+  await initializeApp();
   runApp(Expensify(appRouter: AppRouter()));
 }
 
-Future<void> _initializeApp() async {
-  await ScreenUtil.ensureScreenSize();
-  await SharedPrefHelper.init();
-  _setSystemUIStyles();
-  _lockPortraitMode();
+Future<void> initializeApp() async {
+  await Future.wait(
+    [
+      ScreenUtil.ensureScreenSize(),
+      SharedPrefHelper.init(),
+    ],
+  );
+
+  setSystemUIStyles();
+  lockPortraitMode();
 }
 
-void _setSystemUIStyles() {
+setSystemUIStyles() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       systemNavigationBarColor: ColorsManager.violet100,
@@ -28,7 +33,7 @@ void _setSystemUIStyles() {
   );
 }
 
-void _lockPortraitMode() {
+lockPortraitMode() {
   SystemChrome.setPreferredOrientations(
     [
       DeviceOrientation.portraitUp,

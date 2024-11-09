@@ -7,7 +7,7 @@ bool isLoggedUser = false;
 
 /// Checks if the user is logged in
 Future<void> checkIfLoggedUser() async {
-  final String userToken = await SharedPrefHelper.getString(key: SharedPrefKeys.accessToken);
+  final String userToken = await SharedPrefHelper.getString(key: SharedPrefKeys.accessToken) ?? '';
   isLoggedUser = userToken.isNotEmpty;
 }
 
