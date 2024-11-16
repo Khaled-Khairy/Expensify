@@ -1,4 +1,3 @@
-import 'package:expensify/core/locale/generated/l10n.dart';
 import 'package:expensify/core/resources/colors.dart';
 import 'package:expensify/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
@@ -15,12 +14,12 @@ class AuthButtons extends StatelessWidget {
       child: Column(
         children: [
            AppTextButton(
-            text: S.of(context).onboarding_login,
+            text: 'Login',
             textColor: ColorsManager.light80,
           ),
           10.verticalSpace,
            AppTextButton(
-            text: S.of(context).onboarding_signup,
+            text: 'Sign Up',
             textColor: ColorsManager.violet100,
             backgroundColor: ColorsManager.violet20,
           ),

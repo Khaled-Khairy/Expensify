@@ -23,7 +23,7 @@ Future<void> initializeApp() async {
   setSystemUIStyles();
   lockPortraitMode();
 }
-
+// the status bar at the top and bottom nav bar colors
 setSystemUIStyles() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
@@ -32,7 +32,7 @@ setSystemUIStyles() {
     ),
   );
 }
-
+//disable device orientation
 lockPortraitMode() {
   SystemChrome.setPreferredOrientations(
     [

@@ -2,9 +2,6 @@ import 'package:expensify/features/onboarding/presentation/views/widgets/auth_bu
 import 'package:expensify/features/onboarding/presentation/views/widgets/onboarding_carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../core/widgets/locale_button.dart';
-
 class OnboardingBody extends StatelessWidget {
   const OnboardingBody({super.key});
 
@@ -14,10 +11,6 @@ class OnboardingBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 12.r),
-          child: const LocaleButton(),
-        ),
         const OnboardingCarousel(),
         const AuthButtons(),
       ],

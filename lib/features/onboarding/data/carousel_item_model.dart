@@ -1,4 +1,3 @@
-import 'package:expensify/core/locale/generated/l10n.dart';
 import 'package:expensify/core/resources/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -13,18 +12,18 @@ class CarouselItemModel {
   static List<CarouselItemModel> getCarouselItems(BuildContext context) => [
         CarouselItemModel(
           image: Assets.carouselImage1,
-          title: S.of(context).carouselImage1_title,
-          subtitle: S.of(context).carouselImage1_subtitle,
+          title: 'Gain total control of your money',
+          subtitle: 'Become your own money manager and make every cent count',
         ),
         CarouselItemModel(
           image: Assets.carouselImage2,
-          title: S.of(context).carouselImage2_title,
-          subtitle: S.of(context).carouselImage2_subtitle,
+          title: 'Know where your money goes',
+          subtitle: 'Track your transaction easily, with categories and financial report',
         ),
         CarouselItemModel(
           image: Assets.carouselImage3,
-          title: S.of(context).carouselImage3_title,
-          subtitle: S.of(context).carouselImage3_subtitle,
+          title: 'Planning ahead',
+          subtitle: 'Setup your budget for each category so you are in control',
         ),
       ];
 }
