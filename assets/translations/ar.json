@@ -1,1 +1,12 @@
-{}
+{
+  "authentication": {
+    "carouselImage1_title": "احصل على التحكم الكامل في أموالك",
+    "carouselImage1_subtitle": "كن مدير أموالك الخاص واجعل كل قرش يحتسب",
+    "carouselImage2_title": "اعرف أين تذهب أموالك",
+    "carouselImage2_subtitle": "تتبع معاملاتك بسهولة باستخدام الفئات والتقارير المالية",
+    "carouselImage3_title": "التخطيط المسبق",
+    "carouselImage3_subtitle": "قم بإعداد ميزانيتك لكل فئة لتظل مسيطرًا",
+    "onboarding_signup": "انشاء حساب",
+    "onboarding_login": "تسجيل الدخول"
+  }
+}
