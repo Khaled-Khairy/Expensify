@@ -24,7 +24,7 @@ class Expensify extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRouter,
         initialRoute: Routes.onboardingScreen,
-        theme: theme,
+        theme: theme(context),
       ),
     );
   }
