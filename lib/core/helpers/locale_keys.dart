@@ -1,11 +1,10 @@
 abstract class LocaleKeys {
-  static const authenticationCarouselImage1Title = 'authentication.carouselImage1_title';
-  static const authenticationCarouselImage1Subtitle = 'authentication.carouselImage1_subtitle';
-  static const authenticationCarouselImage2Title = 'authentication.carouselImage2_title';
-  static const authenticationCarouselImage2Subtitle = 'authentication.carouselImage2_subtitle';
-  static const authenticationCarouselImage3Title = 'authentication.carouselImage3_title';
-  static const authenticationCarouselImage3Subtitle = 'authentication.carouselImage3_subtitle';
-  static const authenticationOnboardingSignup = 'authentication.onboarding_signup';
-  static const authenticationOnboardingLogin = 'authentication.onboarding_login';
-  static const authentication = 'authentication';
+  static const onboardingCarouselImage1Title = 'onboarding.carouselImage1_title';
+  static const onboardingCarouselImage1Subtitle = 'onboarding.carouselImage1_subtitle';
+  static const onboardingCarouselImage2Title = 'onboarding.carouselImage2_title';
+  static const onboardingCarouselImage2Subtitle = 'onboarding.carouselImage2_subtitle';
+  static const onboardingCarouselImage3Title = 'onboarding.carouselImage3_title';
+  static const onboardingCarouselImage3Subtitle = 'onboarding.carouselImage3_subtitle';
+  static const onboardingOnboardingSignup = 'onboarding.onboarding_signup';
+  static const onboardingOnboardingLogin = 'onboarding.onboarding_login';
 }

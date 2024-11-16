@@ -14,18 +14,18 @@ class CarouselItemModel {
   static List<CarouselItemModel> getCarouselItems(BuildContext context) => [
         CarouselItemModel(
           image: Assets.carouselImage1,
-          title: context.tr(LocaleKeys.authenticationCarouselImage1Title),
-          subtitle: context.tr(LocaleKeys.authenticationCarouselImage1Subtitle),
+          title: context.tr(LocaleKeys.onboardingCarouselImage1Title),
+          subtitle: context.tr(LocaleKeys.onboardingCarouselImage1Subtitle),
         ),
         CarouselItemModel(
           image: Assets.carouselImage2,
-          title: context.tr(LocaleKeys.authenticationCarouselImage2Title),
-          subtitle: context.tr(LocaleKeys.authenticationCarouselImage2Subtitle),
+          title: context.tr(LocaleKeys.onboardingCarouselImage2Title),
+          subtitle: context.tr(LocaleKeys.onboardingCarouselImage2Subtitle),
         ),
         CarouselItemModel(
           image: Assets.carouselImage3,
-          title: context.tr(LocaleKeys.authenticationCarouselImage3Title),
-          subtitle: context.tr(LocaleKeys.authenticationCarouselImage3Subtitle),
+          title: context.tr(LocaleKeys.onboardingCarouselImage3Title),
+          subtitle: context.tr(LocaleKeys.onboardingCarouselImage3Subtitle),
         ),
       ];
 }

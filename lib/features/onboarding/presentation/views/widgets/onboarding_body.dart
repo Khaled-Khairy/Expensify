@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:expensify/features/onboarding/presentation/views/widgets/auth_buttons.dart';
+import 'package:expensify/features/onboarding/presentation/views/widgets/onboarding_buttons.dart';
 import 'package:expensify/features/onboarding/presentation/views/widgets/onboarding_carousel.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class OnboardingBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const OnboardingCarousel(),
-        const AuthButtons(),
+        const OnboardingButtons(),
         FloatingActionButton(
           onPressed: () {
             if (context.locale == Locale('en')) {
