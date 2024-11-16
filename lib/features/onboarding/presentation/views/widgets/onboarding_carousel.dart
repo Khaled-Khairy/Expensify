@@ -22,11 +22,11 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
     return Column(
       children: [
         CarouselSlider.builder(
-          itemCount: CarouselItemModel.getCarouselItems(context).length,
+          itemCount: CarouselItemModel.getCarouselItems.length,
           itemBuilder: (context, index, realIndex) {
             return CarouselItem(
               carouselItemModel:
-                  CarouselItemModel.getCarouselItems(context)[index],
+                  CarouselItemModel.getCarouselItems[index],
             );
           },
           options: CarouselOptions(
@@ -42,7 +42,7 @@ class _OnboardingCarouselState extends State<OnboardingCarousel> {
         ),
         AnimatedSmoothIndicator(
           activeIndex: currentIndex,
-          count: CarouselItemModel.getCarouselItems(context).length,
+          count: CarouselItemModel.getCarouselItems.length,
           effect: const WormEffect(
             activeDotColor: ColorsManager.violet100,
             dotColor: ColorsManager.light20,

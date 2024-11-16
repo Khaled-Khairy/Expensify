@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:expensify/core/resources/theme.dart';
 import 'package:expensify/core/routing/app_router.dart';
 import 'package:expensify/core/routing/routes.dart';
@@ -17,6 +18,9 @@ class Expensify extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRouter,
         initialRoute: Routes.onboardingScreen,
